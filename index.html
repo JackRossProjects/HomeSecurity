@@ -5,20 +5,23 @@
     <script src="https://unpkg.com/@tensorflow-models/mobilenet"></script>
     <script src="https://unpkg.com/@tensorflow-models/knn-classifier"></script>
     <link rel="stylesheet" href="index.css">
-
+    <link rel="shortcut icon" type="image/png" href="favicon.jpg"/>
+    <title>TF Home Security</title>
   </head>
   <body>
     <div class="header">
-      <h1>Convolutional Home Security</h1>
+      <h1>TensorFlow Home Security</h1>
       <p>Protect your home and everything in it.</p>
     </div>
 
-    <div id="console" class="console"></div>
-    <video autoplay playsinline muted id="webcam" width="448" height="448"></video>
+    <div class="webcam">
+      <div id="console" class="console"></div>
+      <video autoplay playsinline muted id="webcam" width="448" height="448"></video>
+    </div>
     <!-- Toggle hide mood buttons -->
     <button class="toggleHide" onclick="hideButtons()">Hide</button>
 
-    <div id="buttons">
+    <div id="buttons" class="buttons">
       <button id="SECURE" class="SECURE">SECURE</button>
       <button id="ARM" class="ARM">ARM</button>
     </div>
@@ -26,12 +29,12 @@
     <div id="instructions">
       <button class="collapsible">Click for Instructions</button>
       <div class="content">
-        <p>Want to make sure your home is secure while you're gone?<br>
+        <p><h2>Want to make sure your home is secure while you're gone?<h2><br>
         1.) Point your webcam towards your door or valuable item and press the SECURE button.<br>
-        <img src="secure.png" alt="Secure"><br>
-        2.) Stand in view of your secured area and press the ARM button. Now you can leave in peace after you hear the test alarm.<br>
-        <img src="intruder.png" alt="Intruder"><br>
-        3.) Turn your volume up and scare off intuders!</p>
+        <br><img src="secure.png" alt="Secure"><br><br>
+        2.) Stand in view of your secured area and press the ARM button.<br>
+        <br><img src="intruder.png" alt="Intruder"><br><br>
+        3.) Turn your volume up and scare off intuders! Now you can leave in peace after you hear the test alarm.</p>
       </div>
     <!-- Load index.js after the content of the page -->
     <script src="index.js"></script>
