@@ -85,6 +85,13 @@ async function app() {
         Status: ${classes[result.classIndex]}\n
         Accuracy: ${result.confidences[result.classIndex]}
       `;
+      console.log(result);
+
+      if (result.classIndex === 1) {
+        let alarm = new Audio();
+        alarm.src = 'alarm2.wav';
+        alarm.play();
+      }
     }
 
     await tf.nextFrame();
