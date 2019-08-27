@@ -48,7 +48,7 @@ async function app() {
   };
 
   // When clicking a button, add an example for that class.
-
+  // Found that taking 10 examples per click makes the model more accurate
   document.getElementById('SECURE').addEventListener('click', () => addExample(0));
   document.getElementById('SECURE').addEventListener('click', () => addExample(0));
   document.getElementById('SECURE').addEventListener('click', () => addExample(0));
@@ -81,11 +81,11 @@ async function app() {
       const result = await classifier.predictClass(activation);
 
       const classes = ['SECURED', 'INTRUDER ALERT'];
+
       document.getElementById('console').innerText = `
         Status: ${classes[result.classIndex]}\n
         Accuracy: ${result.confidences[result.classIndex]}
       `;
-      console.log(result);
 
       if (result.classIndex === 1) {
         let alarm = new Audio();
